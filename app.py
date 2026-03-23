@@ -8,6 +8,10 @@ y = input("Type? ")
 for i in range(809):
     if y in data[i]["type"]:
         print(data[i]["name"][x])
+z = input("Pokemon Name? ")
+for i in range(809):
+    if z in data[i]["name"]:
+        print(data[i]["name"][z])
 # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name. Complete!
 # Add a language choice feature and print the pokemons name based on the user input. Complete!
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user. Complete!
