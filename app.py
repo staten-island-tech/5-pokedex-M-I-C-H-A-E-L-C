@@ -1,4 +1,5 @@
 x = input("Language? ").lower()
+w = []
 import json ## Open the JSON file of pokemon data
 pokedex = open("./pokedex.json", encoding="utf8") ## create variable "data" that represents the enitre pokedex list
 data = json.load(pokedex)
@@ -7,11 +8,16 @@ for i in range(809):
 y = input("Type? ")
 for i in range(809):
     if y in data[i]["type"]:
-        print(data[i]["name"][x])
+        w.append(data[i]["name"][x])
+print(w)
+w = []
 z = input("Pokemon Name? ")
 for i in range(809):
     if z.lower() in data[i]["name"][x].lower():
-        print(data[i]["name"][x])
+        w.append(data[i]["name"][x])
+print(w)
+if w == []:
+    print("No pokemon found lol T-T")
 # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name. Complete!
 # Add a language choice feature and print the pokemons name based on the user input. Complete!
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user. Complete!
